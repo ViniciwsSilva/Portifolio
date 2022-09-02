@@ -1,0 +1,103 @@
+.footer{
+  background: var(--preto-puro);
+  
+}
+
+.footer-container{
+  max-width: 75rem;
+  padding: 7.5rem 1.25rem 3.75rem 1.25rem;
+  margin: 0rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-items: center;
+  position: relative;
+}
+
+.footer-container::before{
+  content: '';
+  display: block;
+  width: 8.125rem;
+  height: 6.25rem;
+  background: url("../img/deco.svg") no-repeat center;
+  position: absolute;
+  top: -3.125rem;
+  left: 1.25rem;
+}
+
+.footer-texto{
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: var(--cinza-claro4);
+}
+
+.footer-contato li{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+
+.footer-contato li::before{
+  display: block;
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: -2.25rem;
+  top: .25rem;
+}
+
+.footer-contato .email::before{
+  left: -2.5rem;
+  width: 2.375rem;
+  height: 2.375rem;
+}
+
+.decorador{
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 250px;
+  right: 0px;
+  z-index: -1;
+}
+
+.email::before{
+  background: url("../img/email.svg");
+}
+
+.whatsapp::before{
+  background: url("../img/whatsapp.svg");
+}
+
+.instagram::before{
+  background: url("../img/instagram.svg");
+}
+
+.footer-contato li a{
+  color: var(--white);
+}
+
+.footer-copy{
+  font-size: 1.125rem;
+  grid-column: 1 / -1;
+  color: var(--cinza-claro5);
+  position: relative;
+}
+
+@media (max-width: 50rem){
+  .footer-container{
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-contato li{
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+  }
+  .footer-contato li::before{
+    top: -0.1875rem;
+  }
+}
